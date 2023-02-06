@@ -1,0 +1,11 @@
+@import "./header.css";
+@import "./body.css";
+@import "./variables.css";
+@import "./book.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
