@@ -6,7 +6,7 @@ class BookModel
 
     public function __construct()
     {
-        require_once("../config/Database.php");
+        require_once("C:/xampp/htdocs/BookWormNew/config/Database.php");
         
         $db = new Database();
         $this->conn = $db->connection();
