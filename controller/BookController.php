@@ -6,7 +6,7 @@ class BookController
 
     public function __construct()
     {
-        require_once("../model/BookModel.php");
+        require_once("C:/xampp/htdocs/BookWormNew/model/BookModel.php");
         $this->model = new BookModel();
     }
     //pregunta al modelo si ya ha obtenido los datos de la db

@@ -1,33 +1,14 @@
 <?php
-require_once "../controller/BookController.php";
+require_once "C:/xampp/htdocs/BookWormNew/controller/BookController.php";
 $controller = new BookController();
 $result = $controller->getBooks();
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.all.min.js"></script>
-    <title>Bookworms library</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-
-<body>
     <div class="grid content-center justify-center max-w-2xl pt-4 pb-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-10">
         <div class="grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 lg:gap-y-14 lg:gap-x-12">
 
             <?php if ($result): ?>
                 <?php foreach ($result as $book): ?>
-
-
                     <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-r-2xl drop-shadow-lg ">
                         <a href="./displaypage.php?id=<?= $book['id'] ?>" title="View Book" data-toggle="tooltip">
                             <img src="<?= $book['book_image'] ?>" alt="<?= $book['title'] ?> " class=" hover:opacity-75">
@@ -48,12 +29,14 @@ $result = $controller->getBooks();
                             href="./deletepage.php?id=<?= $book['id'] ?>" title="Delete Book" data-toggle="tooltip"> <img
                                 src="./assets/images/delete.svg" alt="Delete button" class="h-6"></a>
                     </div>
-
+                    
 
                 <?php endforeach; ?>
+
+                <?php else : ?> 
+                        <h3>there is not book</h3>
             <?php endif; ?>
+
+
         </div>
     </div>
-</body>
-
-</html>
