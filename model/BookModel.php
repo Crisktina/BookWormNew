@@ -21,8 +21,8 @@ class BookModel
 }
 
 // instanciar conexion de la tabla
- $connection =  new MemberModel();
- var_dump($connection->conn);
+// $connection =  new BookModel();
+ //var_dump($connection->conn);
 
 // instanciar datos
 // $connection =  new MemberModel();

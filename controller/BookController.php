@@ -6,16 +6,16 @@ class BookController
 
     public function __construct()
     {
-        require_once("/Applications/MAMP/htdocs/MVC_EXERCISE/model/MemberModel.php");
-        $this->model = new MemberModel();
+        require_once("../model/BookModel.php");
+        $this->model = new BookModel();
     }
     //pregunta al modelo si ya ha obtenido los datos de la db
-    public function getMembers()
+    public function getBooks()
     {
-        return ($this->model->getMembers() ? $this->model->getMembers() : "there is no books");
+        return ($this->model->getBooks() ? $this->model->getBooks() : "there is no books");
 
     }
 }
 //ver si esta haciendo la llamada a los miembros
-// $controller = new MemberController();
-// var_dump($controller->getMemebers());
+ $controller = new BookController();
+ var_dump($controller->getBooks());
