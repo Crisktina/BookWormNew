@@ -14,8 +14,15 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
 <body>
-  <?php include ("C:/xampp/htdocs/BookWormNew/components/header.php") ?>
-  <?php include ("C:/xampp/htdocs/BookWormNew/components/create_button.php") ?>
-  <?php include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
+  <!-- WINDOWS -->
+  <?php //include ("C:/xampp/htdocs/BookWormNew/components/header.php") ?>  
+  <?php //include ("C:/xampp/htdocs/BookWormNew/components/create_button.php") ?>
+  <?php //include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
+
+  <!-- MAC -->
+  <?php include ("/Applications/MAMP/htdocs/BookWormNew/components/header.php") ?>
+  <?php include ("/Applications/MAMP/htdocs/BookWormNew/components/create_button.php") ?>
+  <?php include ("/Applications/MAMP/htdocs/BookWormNew/view/main.php") ?> 
+
 </body>
 </html>

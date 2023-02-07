@@ -5,8 +5,12 @@ class BookController
     public $model;
 
     public function __construct()
-    {
-        require_once("C:/xampp/htdocs/BookWormNew/model/BookModel.php");
+    {   
+        //WINDOWS
+        //require_once("C:/xampp/htdocs/BookWormNew/model/BookModel.php");
+        // MAC
+        require_once("/Applications/MAMP/htdocs/BookWormNew/model/BookModel.php");
+
         $this->model = new BookModel();
     }
     //pregunta al modelo si ya ha obtenido los datos de la db
