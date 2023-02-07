@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
 <body>
-  <?php include "./components/header.php" ?>
-  <?php include "./components/create_button.php" ?>
-  <?php include "./components/books.php" ?> 
+  <?php include ("C:/xampp/htdocs/BookWormNew/components/header.php") ?>
+  <?php include ("C:/xampp/htdocs/BookWormNew/components/create_button.php") ?>
+  <?php include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
 </body>
 </html>
