@@ -17,7 +17,7 @@ $result = $controller->getBooks();
                 <?php foreach ($result as $book): ?>
                     <div href='#' >
                         <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-r-2xl drop-shadow-lg ">
-                            <a href="./displaypage.php?id=<?= $book['id'] ?>" title="View Book" data-toggle="tooltip">
+                            <a href="./display.php?id=<?= $book['id'] ?>" title="View Book" data-toggle="tooltip">
                                 <img src="<?= $book['book_image'] ?>" alt="<?= $book['title'] ?> " class=" hover:opacity-75">
                             </a>
                         </div>

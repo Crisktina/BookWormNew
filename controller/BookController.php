@@ -19,5 +19,10 @@ class BookController
         return ($this->model->getBooks() ? $this->model->getBooks() : "there is no books");
 
     }
+    public function displayBooks($id)
+    {
+        return ($this->model->displayBooks($id)) ? $this->model->displayBooks($id) : header("Location:main.php");
+
+    }
 }
  
