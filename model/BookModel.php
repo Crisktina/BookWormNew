@@ -22,16 +22,16 @@ class BookModel
         $query = $this->conn->query('SELECT * FROM books');
         return $query->fetch_all(MYSQLI_ASSOC); //obtener la clave valor
     }
-    public function displayBooks($id)
-    {
-        $query = $this->conn->query('SELECT * FROM books WHERE id=$id limit 1');
-        return $query->fetch_all(MYSQLI_ASSOC); 
-     }
-    // public function displayBooks ($id){
-    //     $query=$this->conn->query("SELECT * FROM books WHERE id =$id");
-    //     return $query ? $query->fetch_all():false;
+    // public function displayBooks($id)
+    // {
+    //     $query = $this->conn->query('SELECT * FROM books WHERE id=$id limit 1');
+    //     return $query->fetch_all(MYSQLI_ASSOC); 
+    //  }
+    public function displayBooks ($isbn){
+        $query=$this->conn->query("SELECT * FROM books WHERE isbn ='$isbn'");
+        return $query ? $query->fetch_all():false;
 
-    // }
+    }
 }
 
 // instanciar conexion de la tabla
