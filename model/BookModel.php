@@ -22,6 +22,15 @@ class BookModel
         $query = $this->conn->query('SELECT * FROM books');
         return $query->fetch_all(MYSQLI_ASSOC); //obtener la clave valor
     }
+    public function searchBar(){
+
+     if(ISSET($_GET['search'])){
+        $keyword = $_GET['keyword'];
+        $query = $this->conn->query('SELECT * FROM books WHERE concat(title, author) like '%$keyword%'');
+    }
+       
+    }
+
 }
 
 // instanciar conexion de la tabla
@@ -29,5 +38,5 @@ class BookModel
  //var_dump($connection->conn);
 
 // instanciar datos
-// $connection =  new MemberModel();
-// var_dump($connection->getMembers());
+// $connection =  new BookModel();
+// var_dump($connection->getBooks());

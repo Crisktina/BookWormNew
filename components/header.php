@@ -1,9 +1,3 @@
-<?php 
-// WINDOWS
-require_once("C:/xampp/htdocs/BookWormNew/logics/searchBar.php");
-// MAC
-// require_once("/Applications/MAMP/htdocs/BookWormNew/logics/searchBar.php");
-?>
 
 <nav class="box-nav p-5 lg:p-10">
   <div class="flex justify-between items-center mb-4 lg:mb-6">
