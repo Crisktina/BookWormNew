@@ -1,10 +1,10 @@
 <?php
 
 //WINDOWS
-//require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
         
 // MAC
-require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+// require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->displayBooks($isbn);
@@ -26,7 +26,7 @@ $result = $controller->displayBooks($isbn);
     <link rel="stylesheet" href="../styles/main.css">
   </head>
 <body>
-  <?php include "../components/header.php" ?>
+  <?php include "./header.php" ?>
   <div class="flex flex-col place-content-center items-center">
     <div href='#' class="p-5 flex flex-col justify-center items-center  lg:p-10 lg:w-3/4">
         <div class='flex  overflow-hidden rounded-r-2xl drop-shadow-lg my-6 lg:w-72 '>

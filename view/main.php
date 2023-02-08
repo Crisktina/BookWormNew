@@ -1,10 +1,10 @@
 <?php
 
 //WINDOWS
-//require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
         
 // MAC
-require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+// require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getBooks();
@@ -17,7 +17,7 @@ $result = $controller->getBooks();
                 <?php foreach ($result as $book): ?>
                     <div href='#' >
                         <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-r-2xl drop-shadow-lg ">
-                            <a href="./view/display.php?id=<?= $book['isbn'] ?>" title="View Book" data-toggle="tooltip">
+                            <a href="./display.php/isbn=<?= $book['isbn'] ?>" title="View Book">
                                 <img src="<?= $book['book_image'] ?>" alt="<?= $book['title'] ?> " class=" hover:opacity-75">
                             </a>
                         </div>
