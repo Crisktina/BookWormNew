@@ -6,9 +6,9 @@ class BookModel
 
     public function __construct()
     {
-         //WINDOWS
+        //WINDOWS
         require_once("C:/xampp/htdocs/BookWormNew/config/Database.php");
-        
+
         // MAC
         // require_once("/Applications/MAMP/htdocs/BookWormNew/config/Database.php");
 
@@ -22,21 +22,29 @@ class BookModel
         $query = $this->conn->query('SELECT * FROM books');
         return $query->fetch_all(MYSQLI_ASSOC); //obtener la clave valor
     }
-    // public function displayBooks($id)
-    // {
-    //     $query = $this->conn->query('SELECT * FROM books WHERE id=$id limit 1');
-    //     return $query->fetch_all(MYSQLI_ASSOC); 
-    //  }
-    public function displayBooks ($isbn){
-        $query=$this->conn->query("SELECT * FROM books WHERE isbn ='$isbn'");
-        return $query ? $query->fetch_all():false;
-
+    public function displayBooks($id)
+    {
+        $query = $this->conn->query("SELECT * FROM books WHERE id = '$id' limit 1");
+        return $query->fetch_all(MYSQLI_ASSOC);
     }
+
+    public function deleteBook($id){
+			
+        $query = $this->conn->query("DELETE FROM books WHERE id = '$id'");
+        
+    }
+
+
+// public function displayBooks ($isbn){
+//     $query=$this->conn->query("SELECT * FROM books WHERE id ='$id'");
+//     return $query ? $query->fetch_all():false;
+
+// }
 }
 
 // instanciar conexion de la tabla
 // $connection =  new BookModel();
- //var_dump($connection->conn);
+//var_dump($connection->conn);
 
 // instanciar datos
 // $connection =  new MemberModel();
