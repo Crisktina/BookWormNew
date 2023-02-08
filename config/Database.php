@@ -4,8 +4,8 @@ class Database
 {
     public $servername = "localhost";
     public $username = "root";
-    public $password = "root";
-    //public $password = ""; Para windons y linux
+    // public $password = "root";
+    public $password = ""; 
     public $db = "bookworms";
 
         public function connection()

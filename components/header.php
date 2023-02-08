@@ -1,3 +1,10 @@
+<?php 
+// WINDOWS
+require_once("C:/xampp/htdocs/BookWormNew/logics/searchBar.php");
+// MAC
+// require_once("/Applications/MAMP/htdocs/BookWormNew/logics/searchBar.php");
+?>
+
 <nav class="box-nav p-5 lg:p-10">
   <div class="flex justify-between items-center mb-4 lg:mb-6">
      <a href="/BookWormnew"><img src="./assets/images/logo.svg" alt="Logo"></a>
@@ -7,7 +14,7 @@
   <form class="flex items-center my-2 justify-items-stretch rounded-md bg-white" method="GET">
     <input class="w-full py-2 px-4 rounded-md placeholder:text-blue-400 placeholder:text-sm placeholder:font-bold placeholder:font-sans text-blue-600" type="search" autocomplete="off" placeholder="Search by Title / Author" aria-label="Search" label="Search" name="keyword" value="<?php echo isset($_GET['keyword']) ? $_GET['keyword'] : '' ?>">
     <button class="px-4" type="submit" name="search">
-      <img class="" src="./assets/images/lupa.png" alt="Magnifier glass">
+      <img src="./assets/images/lupa.png" alt="Magnifier glass">
     </button>
   </form>
 </nav>

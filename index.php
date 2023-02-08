@@ -15,14 +15,14 @@
   </head>
 <body>
   <!-- WINDOWS -->
-  <?php //include ("C:/xampp/htdocs/BookWormNew/components/header.php") ?>  
-  <?php //include ("C:/xampp/htdocs/BookWormNew/components/create_button.php") ?>
-  <?php //include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
+  <?php include ("C:/xampp/htdocs/BookWormNew/components/header.php") ?>  
+  <?php include ("C:/xampp/htdocs/BookWormNew/components/create_button.php") ?>
+  <?php include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
 
   <!-- MAC -->
-  <?php include ("/Applications/MAMP/htdocs/BookWormNew/components/header.php") ?>
+  <!-- <?php include ("/Applications/MAMP/htdocs/BookWormNew/components/header.php") ?>
   <?php include ("/Applications/MAMP/htdocs/BookWormNew/components/create_button.php") ?>
-  <?php include ("/Applications/MAMP/htdocs/BookWormNew/view/main.php") ?> 
+  <?php include ("/Applications/MAMP/htdocs/BookWormNew/view/main.php") ?>  -->
 
 </body>
 </html>
