@@ -1,14 +1,15 @@
 <?php
 
 //WINDOWS
-require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+// require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
         
 // MAC
-// require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getBooks();
 ?>
+
 
 <div class="grid content-center justify-center max-w-2xl pt-4 pb-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-10">
         <div class="grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 lg:gap-y-14 lg:gap-x-12">
@@ -41,7 +42,7 @@ $result = $controller->getBooks();
                 <?php endforeach; ?>
 
                 <?php else : ?> 
-                        <h3>there is not book</h3>
+                        <h3>There is not book</h3>
             <?php endif; ?>
 
 
