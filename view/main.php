@@ -17,10 +17,13 @@ $result = $controller->getBooks();
                 <?php foreach ($result as $book): ?>
                     <div href='#' >
                         <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-r-2xl drop-shadow-lg ">
-                            <a href="./view/display.php/<?= $book['id'] ?>" title="View Book">
-                                <img src="<?= $book['book_image'] ?>" alt="<?= $book['title'] ?> " class=" hover:opacity-75">
-                            </a>
-                        </div>
+                            
+                            <div> <?php echo '<a href="./view/display.php?id='.$book["id"].'">
+                        <img src="'.$book['book_image'].'"alt="'.$book['title'].'" class=" hover:opacity-75"></a></br>'?>
+                      </div>
+                       </div>
+                       
+
                         <p class="font-sans text-base font-bold pt-3">
                             <?= $book['title'] ?>
                         </p>

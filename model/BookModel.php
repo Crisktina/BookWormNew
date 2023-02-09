@@ -24,8 +24,10 @@ class BookModel
     }
     public function displayBooks($id)
     {
+        // $query = $this->conn->query("SELECT * FROM books WHERE id = '$id' limit 1");
+        // return $query->fetch_all(MYSQLI_ASSOC);
         $query = $this->conn->query("SELECT * FROM books WHERE id = '$id' limit 1");
-        return $query->fetch_all(MYSQLI_ASSOC);
+        return $query->fetch_assoc();
     }
 
     public function deleteBook($id){

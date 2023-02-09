@@ -7,7 +7,7 @@ require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
 // require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
-$result = $controller->displayBooks($id);
+$result = $controller->displayBooks($_GET['$id']);
 ?>
 
 <!DOCTYPE html>
