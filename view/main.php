@@ -1,10 +1,10 @@
 <?php
 
 //WINDOWS
-require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+// require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
         
 // MAC
-// require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getBooks();

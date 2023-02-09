@@ -7,9 +7,9 @@ class BookController
     public function __construct()
     {   
         //WINDOWS
-        require_once("C:/xampp/htdocs/BookWormNew/model/BookModel.php");
+        // require_once("C:/xampp/htdocs/BookWormNew/model/BookModel.php");
         // MAC
-        // require_once("/Applications/MAMP/htdocs/BookWormNew/model/BookModel.php");
+        require_once("/Applications/MAMP/htdocs/BookWormNew/model/BookModel.php");
 
         $this->model = new BookModel();
     }

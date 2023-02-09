@@ -7,10 +7,10 @@ class BookModel
     public function __construct()
     {
         //WINDOWS
-        require_once("C:/xampp/htdocs/BookWormNew/config/Database.php");
+        // require_once("C:/xampp/htdocs/BookWormNew/config/Database.php");
 
         // MAC
-        // require_once("/Applications/MAMP/htdocs/BookWormNew/config/Database.php");
+        require_once("/Applications/MAMP/htdocs/BookWormNew/config/Database.php");
 
         $db = new Database();
         $this->conn = $db->connection();

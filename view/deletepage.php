@@ -2,20 +2,15 @@
 
 // WINDOWS
 
-include ("C:/xampp/htdocs/BookWormNew/view/header.php");
-include("C:/xampp/htdocs/BookWormNew/view/create_button.php");
-
+// include ("C:/xampp/htdocs/BookWormNew/view/header.php");
+// include("C:/xampp/htdocs/BookWormNew/view/create_button.php");
+// require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
   
 
-//   <!-- MAC -->
-//   include ("/Applications/MAMP/htdocs/BookWormNew/view/header.php") 
-//   include ("/Applications/MAMP/htdocs/BookWormNew/view/create_button.php")
-
-
-require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
-        
-// MAC
-// require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+//  MAC 
+include ("/Applications/MAMP/htdocs/BookWormNew/view/header.php");
+include ("/Applications/MAMP/htdocs/BookWormNew/view/create_button.php");
+require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->deleteBook($id);
