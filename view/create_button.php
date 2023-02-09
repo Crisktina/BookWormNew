@@ -1,5 +1,5 @@
 <div class="my-6 px-4 lg:px-10">
-    <a class="flex justify-between mb-1.5" href="./createpage.php">
+    <a class="flex justify-between mb-1.5" href="./view/create.php">
         <div class="flex">
             <img src="./assets/images/icon_book.svg" alt="Book icon" class="mr-2">
             <p class="font-sans text-blue-600 font-bold text-base">Let's create a new book!</p>

@@ -14,16 +14,30 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
 <body>
+  
+<nav class="box-nav p-5 lg:p-10">
+  <div class="flex justify-between items-center mb-4 lg:mb-6">
+     <a href="/BookWormnew"><img src="./assets/images/logo.svg" alt="Logo"></a>
+    <a href="/BookWormnew"><img src="./assets/images/casita.png" alt="Logo"></a>
+  </div>
+   
+  <form class="flex items-center my-2 justify-items-stretch rounded-md bg-white" method="GET">
+    <input class="w-full py-2 px-4 rounded-md placeholder:text-blue-400 placeholder:text-sm placeholder:font-bold placeholder:font-sans text-blue-600" type="search" autocomplete="off" placeholder="Search by Title / Author" aria-label="Search" label="Search" name="keyword" value="<?= isset($_GET['keyword']) ? $_GET['keyword'] : '' ?>">
+    <button class="px-4" type="submit" name="search">
+      <img src="./assets/images/lupa.png" alt="Magnifier glass">
+    </button>
+  </form>
+</nav>
   <!-- WINDOWS -->
 
-  <?php include ("C:/xampp/htdocs/BookWormNew/view/header.php") ?>  
-  <?php include ("C:/xampp/htdocs/BookWormNew/view/create_button.php") ?>
-  <?php include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
+
+  <?php // include ("C:/xampp/htdocs/BookWormNew/view/create_button.php") ?>
+  <?php // include ("C:/xampp/htdocs/BookWormNew/view/main.php") ?> 
 
   <!-- MAC -->
-  <?php //include ("/Applications/MAMP/htdocs/BookWormNew/view/header.php") ?>
-  <?php //include ("/Applications/MAMP/htdocs/BookWormNew/view/create_button.php") ?>
-  <?php //include ("/Applications/MAMP/htdocs/BookWormNew/view/main.php") ?> 
+
+  <?php include ("/Applications/MAMP/htdocs/BookWormNew/view/create_button.php") ?>
+  <?php include ("/Applications/MAMP/htdocs/BookWormNew/view/main.php") ?> 
 
 </body>
 </html>
