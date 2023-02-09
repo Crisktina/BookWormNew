@@ -15,33 +15,33 @@ class BookModel
         $db = new Database();
         $this->conn = $db->connection();
     }
+
     // extraer datos de la tabla
     public function getBooks()
     {
-        // a través del lenguaje sql lo selecciono todo (tiene o no tiene socias?)
+        // a través del lenguaje sql lo selecciono todo (tiene o no tiene libros?)
         $query = $this->conn->query('SELECT * FROM books');
         return $query->fetch_all(MYSQLI_ASSOC); //obtener la clave valor
     }
+
     public function displayBooks($id)
     {
-        // $query = $this->conn->query("SELECT * FROM books WHERE id = '$id' limit 1");
-        // return $query->fetch_all(MYSQLI_ASSOC);
         $query = $this->conn->query("SELECT * FROM books WHERE id = '$id' limit 1");
         return $query->fetch_assoc();
     }
 
-    public function deleteBook($id){
-			
+    public function deleteBook($id)
+    {
         $query = $this->conn->query("DELETE FROM books WHERE id = '$id'");
-        
+    }
+
+    public function createBook($title, $author, $ISBN, $description, $book_image)
+    {
+        $query = $this->conn->query("INSERT INTO books (title, author, ISBN, description, book_image) VALUES ('" . $title . "', '" . $author . "', '" . $ISBN . "', '" . $description . "', '" . $book_image . "')");
+        return $query;
     }
 
 
-// public function displayBooks ($isbn){
-//     $query=$this->conn->query("SELECT * FROM books WHERE id ='$id'");
-//     return $query ? $query->fetch_all():false;
-
-// }
 }
 
 // instanciar conexion de la tabla

@@ -1,14 +1,4 @@
-<?php
 
-// WINDOWS
-// require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
-  
-//  MAC 
-require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
-
-// $controller = new BookController();
-// $result = $controller->createBook($_GET['id']);
-?>
 
 <?php include "./header.php" ?>
 
@@ -43,3 +33,18 @@ require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.ph
 
 </body>
 </html>
+
+<?php
+
+// WINDOWS
+// require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+  
+//  MAC 
+require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+  $controller = new BookController();
+  $result = $controller->createBook($_POST['title'], $_POST['author'], $_POST['ISBN'], $_POST['description'], $_POST['book_image']);
+}
+?>
