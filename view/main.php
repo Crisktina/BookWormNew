@@ -1,10 +1,10 @@
 <?php
 
 //WINDOWS
-//require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
         
 // MAC
-require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+// require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
 $controller = new BookController();
 $result = $controller->getBooks();
@@ -17,10 +17,13 @@ $result = $controller->getBooks();
                 <?php foreach ($result as $book): ?>
                     <div href='#' >
                         <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-r-2xl drop-shadow-lg ">
-                            <a href="./displaypage.php?id=<?= $book['id'] ?>" title="View Book" data-toggle="tooltip">
-                                <img src="<?= $book['book_image'] ?>" alt="<?= $book['title'] ?> " class=" hover:opacity-75">
-                            </a>
-                        </div>
+                            
+                            <div> <?php echo '<a href="./view/display.php?id='.$book["id"].'">
+                        <img src="'.$book['book_image'].'"alt="'.$book['title'].'" class=" hover:opacity-75"></a></br>'?>
+                      </div>
+                       </div>
+                       
+
                         <p class="font-sans text-base font-bold pt-3">
                             <?= $book['title'] ?>
                         </p>
@@ -29,11 +32,11 @@ $result = $controller->getBooks();
                         </p>
                         <div href='#' class="flex gap-3">
                             <a class="w-2/4 bg-orange-300 rounded-md flex items-center justify-center h-10 hover:bg-orange-400"
-                                href="./editpage.php?id=<?= $book['id'] ?>" title="Edit Book"> <img
+                                href="./editpage.php/<?= $book['id'] ?>" title="Edit Book"> <img
                                     src="./assets/images/edit.svg" alt="Edit button" class="w-6"></a>
 
                             <a class="w-2/4 bg-red-500 rounded-md flex items-center justify-center h-10 hover:bg-red-600"
-                                href="./deletepage.php?id=<?= $book['id'] ?>" title="Delete Book" data-toggle="tooltip"> <img
+                                href="./view/deletepage.php/<?= $book['id'] ?>" title="Delete Book" data-toggle="tooltip"> <img
                                     src="./assets/images/delete.svg" alt="Delete button" class="h-6"></a>
                         </div>
                     
