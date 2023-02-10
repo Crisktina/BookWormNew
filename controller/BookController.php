@@ -22,13 +22,28 @@ class BookController
 
     public function displayBooks($id)
     {
-        // return ($this->model->displayBooks($isbn)) ? $this->model->displayBooks($isbn) : header("Location:main.php");
+        // QUITAR EL TERNARIO, SE LLAMA DOS VECES
       return ($this->model->displayBooks($id)) ? $this->model->displayBooks($id) : "This book is not available";
     }
 
     public function deleteBook($id)
     {
-    return ($this->model->deleteBook($id)) ? $this->model->deleteBook($id) : "This book can't be deleted";	
+        if ($this->model->deleteBook($id)) {
+        ?>
+            <script>
+                swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Success!',
+                text: 'Your book has been saved.',
+                type: 'success',
+                }).then(function (result) {
+                 window.location = "../index.php";
+                })
+                </script> 
+
+    <?php } "Oops! Something went wrong. Please try again later.";
+         
 	}
 
     public function createBook($title, $author, $ISBN, $description, $book_image)

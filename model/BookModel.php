@@ -33,6 +33,7 @@ class BookModel
     public function deleteBook($id)
     {
         $query = $this->conn->query("DELETE FROM books WHERE id = '$id'");
+      
     }
 
     public function createBook($title, $author, $ISBN, $description, $book_image)
