@@ -33,6 +33,7 @@ class BookModel
     public function deleteBook($id)
     {
         $query = $this->conn->query("DELETE FROM books WHERE id = '$id'");
+        return ($query) ? false : true;
       
     }
 
@@ -42,11 +43,11 @@ class BookModel
         return $query;
     }
 
-    public function searchBooks($keyword)
-    {
-        $keyword = $_GET['keyword'];
-        $query = $this->conn->query("SELECT * FROM books WHERE concat(title, author) LIKE '%$keyword%'");
-    }
+    // public function searchBooks($keyword)
+    // {
+    //     $keyword = $_GET['keyword'];
+    //     $query = $this->conn->query("SELECT * FROM books WHERE concat(title, author) LIKE '%$keyword%'");
+    // }
 
 }
 
