@@ -41,3 +41,15 @@
 
 </body>
 </html>
+
+<?php
+
+// WINDOWS
+// require_once("C:/xampp/htdocs/BookWormNew/controller/BookController.php");
+  
+//  MAC 
+require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
+
+$controller = new BookController();
+$result = $controller->searchBooks($_GET['keyword']);
+?>

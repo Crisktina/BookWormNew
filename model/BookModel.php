@@ -42,6 +42,11 @@ class BookModel
         return $query;
     }
 
+    public function searchBooks($keyword)
+    {
+        $keyword = $_GET['keyword'];
+        $query = $this->conn->query("SELECT * FROM books WHERE concat(title, author) LIKE '%$keyword%'");
+    }
 
 }
 

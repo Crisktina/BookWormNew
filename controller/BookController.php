@@ -68,7 +68,11 @@ class BookController
     }
 	}	
         
+    public function searchBooks($keyword)
+    {
+      return $this->model->searchBooks($keyword);
+    }
 
     
 
-    }
+}
