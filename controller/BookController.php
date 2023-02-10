@@ -14,7 +14,6 @@ class BookController
         $this->model = new BookModel();
     }
 
-    //pregunta al modelo si ya ha obtenido los datos de la db
     public function getBooks()
     {
         return ($this->model->getBooks() ? $this->model->getBooks() : "There is no books");
@@ -22,7 +21,6 @@ class BookController
 
     public function displayBooks($id)
     {
-        // QUITAR EL TERNARIO, SE LLAMA DOS VECES
       return ($this->model->displayBooks($id)) ? $this->model->displayBooks($id) : "This book is not available";
     }
 
@@ -67,12 +65,7 @@ class BookController
     echo "Oops! Something went wrong. Please try again later.";
     }
 	}	
-        
-    public function searchBooks($keyword)
-    {
-      return $this->model->searchBooks($keyword);
-    }
-
+ 
     
 
 }

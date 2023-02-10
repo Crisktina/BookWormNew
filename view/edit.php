@@ -6,8 +6,6 @@
 //  MAC 
 require_once("/Applications/MAMP/htdocs/BookWormNew/controller/BookController.php");
 
-// $controller = new BookController();
-// $result = $controller->editBook($_GET['id']);
 ?>
 
 <?php include "./header.php" ?>

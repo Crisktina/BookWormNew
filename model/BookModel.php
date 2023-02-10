@@ -16,12 +16,10 @@ class BookModel
         $this->conn = $db->connection();
     }
 
-    // extraer datos de la tabla
     public function getBooks()
     {
-        // a través del lenguaje sql lo selecciono todo (tiene o no tiene libros?)
         $query = $this->conn->query('SELECT * FROM books');
-        return $query->fetch_all(MYSQLI_ASSOC); //obtener la clave valor
+        return $query->fetch_all(MYSQLI_ASSOC); 
     }
 
     public function displayBooks($id)
@@ -43,22 +41,6 @@ class BookModel
         return $query;
     }
 
-    // public function searchBooks($keyword)
-    // {
-    //     $keyword = $_GET['keyword'];
-    //     $query = $this->conn->query("SELECT * FROM books WHERE concat(title, author) LIKE '%$keyword%'");
-    // }
+
 
 }
-
-// instanciar conexion de la tabla
-// $connection =  new BookModel();
-//var_dump($connection->conn);
-
-// instanciar datos
-// $connection =  new MemberModel();
-// var_dump($connection->getMembers());
-
-// instanciar datos
-//$connection =  new BookModel();
-//var_dump($connection->displayBooks($id));
